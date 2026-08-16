@@ -1,106 +1,38 @@
 "use client";
 
-import TextEngine from "spring-text-engine";
-import { easings } from "@react-spring/web";
-import { PillButton } from "@/components/ui/pill-button";
-import { AnimatedLink } from "@/components/ui/animated-link";
-import { LogoMark } from "@/components/ui/logo-mark";
+import Image from "next/image";
 import { useRequestModal } from "@/hooks/ui-store";
 import type { homeContent } from "@/data/mocks/home";
 
-export interface FooterProps {
-  brand: string;
-  footer: (typeof homeContent)["footer"];
-}
+export interface FooterProps { brand: string; footer: (typeof homeContent)["footer"] }
 
 export const Footer = ({ brand, footer }: FooterProps) => {
-  const openModal = useRequestModal((state) => state.openModal);
-
+  const openModal = useRequestModal((state)=>state.openModal);
   return (
-    <footer className="relative overflow-hidden rounded-t-card bg-ink text-white">
-      <div className="relative z-10 mx-auto max-w-shell px-5 pb-10 pt-20 sm:px-8 lg:pt-24">
-        {/* CTA */}
-        <div className="flex flex-col gap-8 border-b border-white/10 pb-16 lg:flex-row lg:items-end lg:justify-between">
-          <TextEngine
-            tag="h2"
-            mode="once"
-            overflow
-            lineIn={{ y: "0%", opacity: 1 }}
-            lineOut={{ y: "100%", opacity: 0 }}
-            lineStagger={100}
-            lineConfig={{ duration: 900, easing: easings.easeOutCubic }}
-            className="max-w-[16ch] text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
-          >
-            {footer.cta.heading}
-          </TextEngine>
-          <PillButton
-            label={footer.cta.button.label}
-            onClick={openModal}
-            variant="light"
-            withArrow
-            arrow="up-right"
-          />
-        </div>
-
-        {/* Columns */}
-        <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col gap-4">
-            <span className="flex items-center gap-2 text-lg font-semibold">
-              <LogoMark className="text-xl" />
-              {brand}
-            </span>
-            <p className="max-w-xs text-sm text-white/55">{footer.tagline}</p>
+    <footer className="residency-footer" id="contact">
+      <div className="residency-footer__orb" aria-hidden="true" />
+      <div className="mx-auto max-w-shell px-5 pb-8 pt-20 sm:px-8 lg:pt-24">
+        <div className="residency-footer__grid">
+          <div className="residency-footer__brand">
+            <Image src="/assets/aa-logo.png" alt={`${brand} logo`} width={360} height={120} />
+            <h2>{footer.cta.heading}</h2>
+            <p>{footer.tagline}</p>
+            <a href="tel:+971564086728">Call Us: +971 56 408 6728</a>
           </div>
 
-          {footer.columns.map((column) => (
-            <nav
-              key={column.title}
-              aria-label={column.title}
-              className="flex flex-col gap-4"
-            >
-              <p className="text-xs uppercase tracking-wide text-white/40">
-                {column.title}
-              </p>
-              <ul className="flex flex-col gap-3 text-sm">
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    <AnimatedLink href={link.href} className="text-white">
-                      {link.label}
-                    </AnimatedLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ))}
+          <div className="footer-consultation">
+            <p>Let&apos;s Talk</p>
+            <h3>Request a Free Consultation</h3>
+            <div className="footer-consultation__steps" aria-label="Consultation steps">
+              {["Business Type","Business Details","Personal Details"].map((step,index)=><span key={step}><b>{index+1}</b><small>{step}</small></span>)}
+            </div>
+            <label htmlFor="footer-residency">Are you planning to apply for UAE residency?</label>
+            <select id="footer-residency" defaultValue="yes"><option value="yes">Yes</option><option value="no">No, I need advice</option></select>
+            <button type="button" onClick={openModal}>Start consultation <span>→</span></button>
+          </div>
         </div>
-
-        {/* Legal bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/45 sm:flex-row">
-          <p>{footer.legal.copyright}</p>
-          <ul className="flex items-center gap-6">
-            {footer.legal.links.map((link) => (
-              <li key={link.label}>
-                <AnimatedLink
-                  href={link.href}
-                  className="text-white/70"
-                  from={{ transform: "translateX(0px)", opacity: 0.7 }}
-                  to={{ transform: "translateX(3px)", opacity: 1 }}
-                >
-                  {link.label}
-                </AnimatedLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="residency-footer__legal"><p>{footer.legal.copyright}</p><nav>{footer.legal.links.map(link=><a href={link.href} key={link.label}>{link.label}</a>)}</nav></div>
       </div>
-
-      {/* Brand watermark */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 -bottom-6 z-0 select-none text-center font-bold leading-none text-watermark text-white/5"
-      >
-        {footer.brandWatermark}
-      </span>
     </footer>
   );
 };

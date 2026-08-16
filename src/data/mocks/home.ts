@@ -247,6 +247,22 @@ export const homeContent = {
       { name: "Federal Tax Authority", image: "/assets/agencies/federal-tax-authority.webp" },
     ],
   },
+  faq: {
+    eyebrow: "Questions, answered",
+    heading: "UAE residency FAQs",
+    intro: "Clear answers about the five-day investor residency programme, company formation and bringing your family to the UAE.",
+    items: [
+      { question: "How can I get UAE residency fast?", answer: "The quickest route is a free-zone company formation paired with an investor visa. Most paperwork is completed remotely in the first 3 working days, followed by a short 2-working-day UAE visit for medical screening, biometrics and final approval." },
+      { question: "How much does UAE residency cost?", answer: "Your final cost depends on the selected business activities, visa requirements and number of applicants. A consultant will confirm the complete package price before your application begins." },
+      { question: "Do I need to move to the UAE to get residency?", answer: "No. The initial company and immigration processing can be handled remotely. You only need to visit the UAE for the required in-person medical screening and Emirates ID biometrics." },
+      { question: "Can I get a UAE visa without a job offer?", answer: "Yes. An investor or business-owner residency route does not require a traditional employer job offer, provided the company and immigration requirements are met." },
+      { question: "Can I bring my spouse and children on a UAE investor visa?", answer: "Family sponsorship is available after your own residency is issued, subject to the applicable immigration requirements and supporting documents." },
+      { question: "How long is a UAE investor visa valid for?", answer: "This programme includes a renewable two-year investor residence visa. Renewal eligibility remains subject to the company and immigration requirements in force at that time." },
+      { question: "What documents do I need to apply for UAE residency?", answer: "Typical documents include a clear passport copy, passport photograph and basic personal and business information. Your consultant will provide the final checklist for your application." },
+      { question: "Can I own 100% of my company in the UAE as a foreigner?", answer: "Yes. The included free-zone company structure permits full foreign ownership for approved business activities." },
+      { question: "What happens if I fail the UAE medical test?", answer: "Residency approval depends on completing the required government medical screening. If a result needs review, the relevant authority determines the next steps and our team will guide you through the process." },
+    ],
+  },
   footer: {
     brandWatermark: "A&A",
     cta: {
