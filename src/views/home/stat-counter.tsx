@@ -34,13 +34,14 @@ export const StatCounter = ({ stat, index }: StatCounterProps) => {
         onChange={({ progress }) =>
           setValue(Math.round(progress * stat.value))
         }
+        className="authority-stat"
       >
-        <p className="text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
+        <p className="authority-stat__value">
           {stat.prefix ?? ""}
           {value}
           {stat.suffix}
         </p>
-        <p className="mt-3 text-sm text-white/55">{stat.label}</p>
+        <p className="authority-stat__label">{stat.label}</p>
       </ProgressTrigger>
     </Inview>
   );
