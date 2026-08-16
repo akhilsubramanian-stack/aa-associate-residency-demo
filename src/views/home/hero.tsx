@@ -50,21 +50,21 @@ export const Hero = ({ hero }: HeroProps) => {
 
       <div aria-hidden className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(5,8,15,.88)_0%,rgba(5,8,15,.68)_44%,rgba(5,8,15,.38)_70%,rgba(5,8,15,.56)_100%)]" />
 
-      <div className="relative z-20 mx-auto grid max-w-shell gap-10 px-5 pb-16 pt-32 sm:px-8 lg:min-h-lvh lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-14 lg:pb-20 lg:pt-36">
-        <div className="flex flex-col items-start text-white">
+      <div className="hero-content relative z-20 mx-auto grid max-w-shell gap-10 px-5 pb-16 pt-32 sm:px-8 lg:min-h-lvh lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-14 lg:pb-20 lg:pt-36">
+        <div className="hero-copy flex flex-col items-start text-white">
           <Inview tag="p" mode="once" enabled={ready} from={{ opacity: 0, transform: "translateY(10px)" }} to={{ opacity: 1, transform: "translateY(0px)" }} className="mb-4 text-sm font-semibold uppercase tracking-[.18em] text-[#e0c675]">
             UAE Investor Residency
           </Inview>
 
-          <h1 id="hero-heading" className="max-w-[13ch] text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 id="hero-heading" className="hero-title max-w-[13ch] text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
             World&apos;s Fastest UAE <span className="text-[#e0c675]">Residency Program</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
+          <p className="hero-description mt-5 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
             Secure full UAE residency in just 5 working days, with most of the process completed remotely before you arrive.
           </p>
 
-          <div className="mt-7 w-full max-w-2xl rounded-3xl border border-[#e0c675]/35 bg-transparent p-5 sm:p-6">
+          <div className="hero-inclusions mt-7 w-full max-w-2xl rounded-3xl border border-[#e0c675]/35 bg-transparent p-5 sm:p-6">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[.18em] text-[#e0c675]">Your company includes</p>
             <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
               {inclusions.map((item) => (
@@ -80,11 +80,11 @@ export const Hero = ({ hero }: HeroProps) => {
             Start Your Residency <span aria-hidden>→</span>
           </button>
 
-          <div className="mt-6 flex flex-wrap gap-2.5" aria-label="Customer review ratings">
+          <div className="hero-reviews mt-6 flex flex-wrap gap-2.5" aria-label="Customer review ratings">
             {reviews.map((review) => (
-              <div key={review.name} className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
-                <span className={`grid size-7 place-items-center rounded-full bg-white text-lg font-bold ${review.color}`}>{review.mark}</span>
-                <span className="text-xs leading-tight text-white"><strong className="block text-sm">{review.rating} ★★★★★</strong>{review.name} Reviews</span>
+              <div key={review.name} className="hero-review flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
+                <span className={`hero-review__mark grid size-7 place-items-center rounded-full bg-white text-lg font-bold ${review.color}`}>{review.mark}</span>
+                <span className="hero-review__copy text-xs leading-tight text-white"><strong className="hero-review__rating block text-sm">{review.rating} ★★★★★</strong>{review.name} Reviews</span>
               </div>
             ))}
           </div>
