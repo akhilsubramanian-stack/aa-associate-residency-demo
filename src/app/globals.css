@@ -1033,9 +1033,13 @@ body {
     }
 
     .hero-title {
-      max-width: 11ch;
-      font-size: clamp(2.7rem, 13.4vw, 3.35rem);
+      max-width: 100%;
+      font-size: clamp(2rem, 9.5vw, 2.4rem);
       line-height: .96;
+    }
+
+    .hero-title__first-line {
+      white-space: nowrap;
     }
 
     .hero-description {
@@ -1050,45 +1054,55 @@ body {
     }
 
     .hero-reviews {
-      display: flex !important;
+      display: grid !important;
       width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: .45rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .3rem;
     }
 
     .hero-review {
-      width: auto;
+      width: 100%;
       min-width: 0;
-      gap: .4rem;
-      padding: .42rem .65rem;
+      gap: .3rem;
+      padding: .38rem .35rem;
     }
 
     .hero-review__mark {
-      width: 1.35rem;
-      height: 1.35rem;
-      flex: 0 0 1.35rem;
-      font-size: .75rem;
+      width: 1.65rem;
+      height: 1.65rem;
+      flex: 0 0 1.65rem;
+      font-size: .9rem;
     }
 
     .hero-review__copy {
+      display: block !important;
       min-width: 0;
       overflow: hidden;
-      font-size: .52rem;
-      line-height: 1.15;
+      font-size: .48rem;
+      line-height: 1.05;
       white-space: nowrap;
+    }
+
+    .hero-review__desktop-copy {
+      display: none;
     }
 
     .hero-review__rating {
-      overflow: hidden;
-      font-size: .66rem;
-      text-overflow: clip;
+      display: flex;
+      align-items: baseline;
+      gap: .2rem;
+      font-size: .48rem;
       white-space: nowrap;
     }
 
+    .hero-review__rating b {
+      font-size: .76rem;
+    }
+
     .hero-review__stars {
-      font-size: .56rem;
-      letter-spacing: -.08em;
+      color: #e0c675;
+      font-size: .55rem;
+      letter-spacing: .02em;
     }
 
     .hero-cinema__depth--one { inset: 5%; }
