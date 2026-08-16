@@ -59,6 +59,7 @@ export const Stats = ({ stats }: StatsProps) => {
               src="/assets/sections/dubai-corporate-night-v2.jpg"
               alt="Dubai skyline viewed from a premium executive lounge"
               fill
+              unoptimized
               sizes="(max-width: 640px) 100vw, 88rem"
               className="authority-scene__image"
             />
