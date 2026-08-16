@@ -82,9 +82,9 @@ export const homeContent = {
   hero: {
     eyebrow: "UAE Investor Residency",
     brandWatermark: "DUBAI",
-    headingLines: ["Your UAE residency,", "ready in just", "5 working days"],
+    headingLines: ["World's Fastest UAE", "Residency Program"],
     rating: 5,
-    customers: "$4,550 all-inclusive · no hidden fees",
+    customers: "",
     primaryCta: { label: "Start Your Residency", href: "#contact" },
     secondaryCta: { label: "See the Process", href: "#works" },
     cards: [
