@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type CSSProperties, type PointerEvent } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
 import type { homeContent } from "@/data/mocks/home";
@@ -62,8 +63,14 @@ export const Awards = ({ awards }: AwardsProps) => {
             <ul className="awards-grid">
               {awards.items.map((award, index) => (
                 <li className={`award-plaque award-plaque--${index + 1}`} key={award.name}>
-                  <div className="award-plaque__medallion" aria-hidden="true">
-                    <span>{award.mark}</span>
+                  <div className="award-plaque__logo">
+                    <Image
+                      src={award.image}
+                      alt={`${award.name} logo`}
+                      width={285}
+                      height={110}
+                      sizes="(max-width: 640px) 140px, 160px"
+                    />
                   </div>
                   <div>
                     <strong>{award.name}</strong>
