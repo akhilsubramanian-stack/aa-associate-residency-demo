@@ -6,6 +6,7 @@ import { Portfolio } from "@/views/home/portfolio";
 import { Services } from "@/views/home/services";
 import { Stats } from "@/views/home/stats";
 import { Awards } from "@/views/home/awards";
+import { Testimonials } from "@/views/home/testimonials";
 import { Footer } from "@/views/home/footer";
 import { PageLoader } from "@/components/common/page-loader";
 import { NavMenu } from "@/components/common/nav-menu";
@@ -41,6 +42,7 @@ export const HomeView = () => {
         <Services services={homeContent.services} />
         <Stats stats={homeContent.stats} />
         <Awards awards={homeContent.awards} />
+        <Testimonials testimonials={homeContent.testimonials} />
       </main>
 
       <Footer brand={homeContent.brand} footer={homeContent.footer} />
