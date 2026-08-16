@@ -131,10 +131,6 @@ body {
     border: 1px solid rgba(213,171,75,.5);
     border-radius: 2rem;
     background-color: #031d33;
-    background-image: url('/assets/sections/dubai-corporate-night-v1.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: 0 3rem 7rem rgba(3,34,58,.25),inset 0 1px rgba(255,255,255,.18);
     transform: rotateX(var(--stats-rx)) rotateY(var(--stats-ry));
     transform-style: flat;
@@ -142,6 +138,7 @@ body {
   }
 
   .authority-scene:hover .authority-scene__frame { box-shadow: 0 4rem 8rem rgba(3,34,58,.35),inset 0 1px rgba(255,255,255,.2); }
+  .authority-scene__image { z-index:0; width:100%; height:100%; object-fit:cover; object-position:center; transform:none!important; }
   .authority-scene__veil { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg,rgba(1,20,36,.86) 0%,rgba(2,27,47,.72) 34%,rgba(3,36,60,.32) 58%,rgba(1,13,23,.04) 100%); }
   .authority-scene__light { position: absolute; z-index: 2; inset: 0; background: radial-gradient(circle at var(--stats-x) var(--stats-y),rgba(222,182,89,.18),transparent 28%); mix-blend-mode: screen; pointer-events: none; }
 
@@ -172,7 +169,7 @@ body {
   }
 
   @media (max-width:640px){
-    .authority-scene{min-height:66rem;perspective:none}.authority-scene__frame{border-radius:1.4rem;background-position:68% center;transform:none}.authority-scene__veil{background:linear-gradient(180deg,rgba(1,20,36,.72),rgba(1,20,36,.95) 44%,#031d33 78%)}.authority-scene__content{min-height:66rem;display:flex;flex-direction:column;justify-content:flex-end;gap:2rem;padding:2rem 1.25rem}.authority-scene__content header{max-width:none}.authority-scene__content h2{font-size:2.7rem}.authority-scene__content header>span{font-size:.88rem;line-height:1.55}.authority-scene__content>ul{width:100%;gap:.65rem}.authority-stat{min-height:8rem;padding:1rem}.authority-stat__value{font-size:2.35rem}.authority-stat__label{font-size:.7rem}.authority-scene__seal{right:1.2rem;top:1.2rem;width:5rem;height:5rem;transform:none}.authority-scene__edge{inset:.65rem;border-radius:.95rem;transform:none}
+    .authority-scene{min-height:66rem;perspective:none}.authority-scene__frame{border-radius:1.4rem;transform:none}.authority-scene__image{object-position:68% center}.authority-scene__veil{background:linear-gradient(180deg,rgba(1,20,36,.72),rgba(1,20,36,.95) 44%,#031d33 78%)}.authority-scene__content{min-height:66rem;display:flex;flex-direction:column;justify-content:flex-end;gap:2rem;padding:2rem 1.25rem}.authority-scene__content header{max-width:none}.authority-scene__content h2{font-size:2.7rem}.authority-scene__content header>span{font-size:.88rem;line-height:1.55}.authority-scene__content>ul{width:100%;gap:.65rem}.authority-stat{min-height:8rem;padding:1rem}.authority-stat__value{font-size:2.35rem}.authority-stat__label{font-size:.7rem}.authority-scene__seal{right:1.2rem;top:1.2rem;width:5rem;height:5rem;transform:none}.authority-scene__edge{inset:.65rem;border-radius:.95rem;transform:none}
   }
 
   @media (prefers-reduced-motion:reduce){.authority-scene__frame,.authority-stat{transform:none;transition:none}.authority-scene__seal{animation:none;transform:none}}
