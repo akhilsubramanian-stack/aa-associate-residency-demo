@@ -90,8 +90,27 @@ body {
   }
 
   @media (max-width: 640px) {
+    .mobile-heading-break {
+      display: block;
+    }
+
+    .mobile-section-heading {
+      max-width: 100% !important;
+      font-size: clamp(1.95rem, 8.5vw, 2.35rem) !important;
+      line-height: 1.03 !important;
+      letter-spacing: -.04em !important;
+      text-align: left;
+      text-wrap: balance;
+    }
+
     html {
       font-size: 4.444444vw; /* 16 * 100 / 360 */
+    }
+  }
+
+  @media (min-width: 641px) {
+    .mobile-heading-break {
+      display: none;
     }
   }
 }

@@ -53,7 +53,7 @@ export const Testimonials = ({ testimonials }: TestimonialsProps) => {
           className="client-stories__header"
         >
           <p>{testimonials.eyebrow}</p>
-          <h2 id="client-stories-heading">{testimonials.heading}</h2>
+          <h2 id="client-stories-heading" className="mobile-section-heading">The Entrepreneur&rsquo;s First <br className="mobile-heading-break" />Choice for Business Setup</h2>
           <span>{testimonials.intro}</span>
         </Inview>
 

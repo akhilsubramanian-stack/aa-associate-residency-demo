@@ -15,7 +15,7 @@ export const Footer = ({ brand, footer }: FooterProps) => {
         <div className="residency-footer__grid">
           <div className="residency-footer__brand">
             <Image src="/assets/aa-logo.png" alt={`${brand} logo`} width={360} height={120} />
-            <h2>{footer.cta.heading}</h2>
+            <h2 className="mobile-section-heading">Ready to start your <br className="mobile-heading-break" />UAE Residency?</h2>
             <p>{footer.tagline}</p>
             <a href="tel:+971564086728">Call Us: +971 56 408 6728</a>
           </div>

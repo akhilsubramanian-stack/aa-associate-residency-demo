@@ -57,7 +57,7 @@ export const Hero = ({ hero }: HeroProps) => {
           </Inview>
 
           <h1 id="hero-heading" className="hero-title max-w-[13ch] text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
-            World&apos;s Fastest UAE <span className="text-[#e0c675]">Residency Program</span>
+            World&apos;s Fastest UAE <br className="mobile-heading-break" /><span className="text-[#e0c675]">Residency Program</span>
           </h1>
 
           <p className="hero-description mt-5 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">

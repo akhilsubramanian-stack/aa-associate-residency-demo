@@ -14,7 +14,7 @@ export const Location = () => (
       </div>
       <div className="office-location__plaque">
         <span>Dubai Headquarters</span>
-        <h2 id="office-location-heading">Right at the heart of Dubai</h2>
+        <h2 id="office-location-heading" className="mobile-section-heading">Right at the heart of Dubai</h2>
         <p>Level 12, Rolex Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE.</p>
         <a href="https://maps.google.com/?q=Rolex+Tower+Sheikh+Zayed+Road+Dubai" target="_blank" rel="noreferrer">Open in Google Maps <b>↗</b></a>
       </div>

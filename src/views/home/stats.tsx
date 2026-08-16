@@ -74,7 +74,7 @@ export const Stats = ({ stats }: StatsProps) => {
             <div className="authority-scene__content">
               <header>
                 <p>{stats.eyebrow}</p>
-                <h2 id="stats-heading">{stats.heading}</h2>
+                <h2 id="stats-heading" className="mobile-section-heading">UAE&rsquo;s Largest <br className="mobile-heading-break" />Corporate Service Provider</h2>
                 <span>{stats.intro}</span>
               </header>
 
