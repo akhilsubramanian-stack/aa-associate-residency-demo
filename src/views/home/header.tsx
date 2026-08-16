@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
 import { Hover } from "@/components/animation/springs/hover";
-import { LogoMark } from "@/components/ui/logo-mark";
 import { GridIcon } from "@/components/ui/icons";
 import { useClock } from "@/hooks/use-clock";
 import { useIntro, useNavMenu, useRequestModal } from "@/hooks/ui-store";
@@ -48,15 +47,8 @@ export const Header = ({ brand, nav, meta }: HeaderProps) => {
           aria-label={`${brand} — home`}
           className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
-          <Hover
-            tag="span"
-            from={{ transform: "scale(1)" }}
-            to={{ transform: "scale(1.04)" }}
-            config={{ tension: 320, friction: 18 }}
-            className="flex items-center gap-2 text-lg font-semibold tracking-tight"
-          >
-            <LogoMark className="text-xl text-accent" />
-            <span>{brand}</span>
+          <Hover tag="span" from={{ transform: "scale(1)" }} to={{ transform: "scale(1.03)" }} config={{ tension: 320, friction: 18 }} className="block">
+            <img src="https://aaassociate.com/wp-content/uploads/2026/08/AA-10-year-Logo-Gold.png" alt={brand} className="h-auto w-[14rem] max-w-[58vw] object-contain" />
           </Hover>
         </button>
 
@@ -75,21 +67,21 @@ export const Header = ({ brand, nav, meta }: HeaderProps) => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <p className="hidden items-center gap-3 rounded-control border border-line/80 bg-white/40 px-3 py-2 text-xs text-foreground/70 backdrop-blur-sm md:flex">
-            <span className="text-foreground/45">{meta.statusLabel}</span>
+        <div className="flex items-center gap-3 lg:hidden">
+          <p className="hidden items-center gap-3 rounded-control border border-white/25 bg-black/30 px-3 py-2 text-xs text-white/85 backdrop-blur-sm">
+            <span className="text-white/70">{meta.statusLabel}</span>
             <span
               suppressHydrationWarning
-              className="min-w-[3.5rem] font-medium tabular-nums text-foreground"
+              className="min-w-[3.5rem] font-medium tabular-nums text-white"
             >
               {clock.ready ? clock.time : meta.time}
             </span>
-            <span aria-hidden className="text-foreground/30">
+            <span aria-hidden className="text-white/45">
               •
             </span>
             <time
               suppressHydrationWarning
-              className="font-medium text-foreground"
+              className="font-medium text-white"
             >
               {clock.ready ? clock.date : meta.date}
             </time>
@@ -98,7 +90,7 @@ export const Header = ({ brand, nav, meta }: HeaderProps) => {
             type="button"
             onClick={openMenu}
             aria-label="Open menu"
-            className="rounded-control border border-line/80 bg-white/40 backdrop-blur-sm transition-colors hover:bg-white/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="rounded-control border border-white/25 bg-black/30 text-white backdrop-blur-sm transition-colors hover:bg-black/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <Hover
               tag="span"
@@ -133,7 +125,7 @@ const NavItem = ({ label, hasDropdown, current, onClick }: NavItemProps) => {
       type="button"
       onClick={onClick}
       aria-current={current ? "page" : undefined}
-      className="inline-flex w-fit items-center gap-1 text-foreground/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="inline-flex w-fit items-center gap-1 text-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       <Hover
         tag="span"
