@@ -139,7 +139,7 @@ body {
 
   .authority-scene:hover .authority-scene__frame { box-shadow: 0 4rem 8rem rgba(3,34,58,.35),inset 0 1px rgba(255,255,255,.2); }
   .authority-scene__image { z-index:0; width:100%; height:100%; object-fit:cover; object-position:center; transform:none!important; }
-  .authority-scene__veil { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg,rgba(1,20,36,.86) 0%,rgba(2,27,47,.72) 34%,rgba(3,36,60,.32) 58%,rgba(1,13,23,.04) 100%); }
+  .authority-scene__veil { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg,rgba(1,20,36,.72) 0%,rgba(2,27,47,.52) 34%,rgba(3,36,60,.18) 58%,rgba(1,13,23,0) 100%); }
   .authority-scene__light { position: absolute; z-index: 2; inset: 0; background: radial-gradient(circle at var(--stats-x) var(--stats-y),rgba(222,182,89,.18),transparent 28%); mix-blend-mode: screen; pointer-events: none; }
 
   .authority-scene__content { position: relative; z-index: 4; display: grid; min-height: 49rem; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 3rem; padding: 4rem; }
@@ -165,7 +165,7 @@ body {
   @keyframes authority-seal { from{transform:translateY(-.25rem) rotate(5deg)} to{transform:translateY(.35rem) rotate(10deg)} }
 
   @media (max-width:1050px){
-    .authority-scene{min-height:58rem}.authority-scene__content{min-height:58rem;grid-template-columns:1fr;align-content:center;padding:3rem}.authority-scene__content header{max-width:70%}.authority-scene__content>ul{max-width:46rem}.authority-scene__veil{background:linear-gradient(90deg,rgba(1,20,36,.96),rgba(2,27,47,.76) 70%,rgba(1,13,23,.22))}
+    .authority-scene{min-height:58rem}.authority-scene__content{min-height:58rem;grid-template-columns:1fr;align-content:center;padding:3rem}.authority-scene__content header{max-width:70%}.authority-scene__content>ul{max-width:46rem}.authority-scene__veil{background:linear-gradient(90deg,rgba(1,20,36,.78),rgba(2,27,47,.52) 70%,rgba(1,13,23,.08))}
   }
 
   @media (max-width:640px){

@@ -56,7 +56,7 @@ export const Stats = ({ stats }: StatsProps) => {
           <div className="authority-scene__shadow" aria-hidden="true" />
           <div className="authority-scene__frame">
             <Image
-              src="/assets/sections/dubai-corporate-night-v1.png"
+              src="/assets/sections/dubai-corporate-night-v2.jpg"
               alt="Dubai skyline viewed from a premium executive lounge"
               fill
               sizes="(max-width: 640px) 100vw, 88rem"
