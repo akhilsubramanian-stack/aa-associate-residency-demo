@@ -234,6 +234,19 @@ export const homeContent = {
       { name: "Abdul", country: "French", flag: "🇫🇷", videoId: "6uJFwKl342c" },
     ],
   },
+  agencies: {
+    heading: "We work closely with all Government Agencies",
+    intro: "We're always on the same page with Government Agencies, working together to get the job done!",
+    items: [
+      { name: "Government of Dubai", image: "/assets/agencies/government-of-dubai.webp" },
+      { name: "UAE Ministry of Finance", image: "/assets/agencies/ministry-of-finance.webp" },
+      { name: "Expo 2020 Dubai", image: "/assets/agencies/expo-2020.webp" },
+      { name: "Dubai Health Authority", image: "/assets/agencies/dubai-health-authority.webp" },
+      { name: "Emirates Identity Authority", image: "/assets/agencies/emirates-identity-authority.webp" },
+      { name: "Dubai Police", image: "/assets/agencies/dubai-police.webp" },
+      { name: "Federal Tax Authority", image: "/assets/agencies/federal-tax-authority.webp" },
+    ],
+  },
   footer: {
     brandWatermark: "A&A",
     cta: {
