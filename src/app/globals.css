@@ -1057,7 +1057,7 @@ body {
     }
 
     .hero-review__mobile-copy {
-      display: grid;
+      display: grid !important;
       min-width: 0;
       flex: 1 1 auto;
       gap: .08rem;
