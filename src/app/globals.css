@@ -1004,7 +1004,7 @@ body {
 
   @media (max-width: 640px) {
     .hero-cinema__video {
-      top: 38rem;
+      top: 32rem;
       object-position: center center;
     }
 
@@ -1034,35 +1034,41 @@ body {
       display: grid;
       width: 100%;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: .35rem;
+      gap: .25rem;
     }
 
     .hero-review {
+      width: 100%;
       min-width: 0;
-      gap: .35rem;
-      padding: .42rem .38rem;
+      gap: .25rem;
+      padding: .32rem .28rem;
     }
 
     .hero-review__mark {
-      width: 1.35rem;
-      height: 1.35rem;
-      flex: 0 0 1.35rem;
-      font-size: .75rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      flex: 0 0 1.15rem;
+      font-size: .62rem;
     }
 
     .hero-review__copy {
       min-width: 0;
       overflow: hidden;
-      font-size: .48rem;
+      font-size: .4rem;
       line-height: 1.15;
       white-space: nowrap;
     }
 
     .hero-review__rating {
       overflow: hidden;
-      font-size: .62rem;
+      font-size: .54rem;
       text-overflow: clip;
       white-space: nowrap;
+    }
+
+    .hero-review__stars {
+      font-size: .45rem;
+      letter-spacing: -.08em;
     }
 
     .hero-cinema__depth--one { inset: 5%; }
