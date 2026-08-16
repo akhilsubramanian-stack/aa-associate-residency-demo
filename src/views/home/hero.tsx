@@ -57,7 +57,7 @@ export const Hero = ({ hero }: HeroProps) => {
           </Inview>
 
           <h1 id="hero-heading" className="hero-title max-w-[13ch] text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
-            World&apos;s Fastest UAE <br className="mobile-heading-break" /><span className="text-[#e0c675]">Residency Program</span>
+            <span className="hero-title__first-line">World&apos;s Fastest UAE</span> <br className="mobile-heading-break" /><span className="text-[#e0c675]">Residency Program</span>
           </h1>
 
           <p className="hero-description mt-5 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
@@ -84,7 +84,11 @@ export const Hero = ({ hero }: HeroProps) => {
             {reviews.map((review) => (
               <div key={review.name} className="hero-review flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
                 <span className={`hero-review__mark grid size-7 place-items-center rounded-full bg-white text-lg font-bold ${review.color}`}>{review.mark}</span>
-                <span className="hero-review__copy text-xs leading-tight text-white"><strong className="hero-review__rating block text-sm">{review.rating} <span className="hero-review__stars">★★★★★</span></strong>{review.name} Reviews</span>
+                <span className="hero-review__desktop-copy text-xs leading-tight text-white"><strong className="block text-sm">{review.rating} ★★★★★</strong>{review.name} Reviews</span>
+                <span className="hero-review__copy hidden text-xs leading-tight text-white">
+                  <strong className="hero-review__stars block text-sm">★★★★★</strong>
+                  <span className="hero-review__rating"><b>{review.rating}</b> Reviews</span>
+                </span>
               </div>
             ))}
           </div>
