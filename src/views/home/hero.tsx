@@ -84,7 +84,7 @@ export const Hero = ({ hero }: HeroProps) => {
             {reviews.map((review) => (
               <div key={review.name} className="hero-review flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
                 <span className={`hero-review__mark grid size-7 place-items-center rounded-full bg-white text-lg font-bold ${review.color}`}>{review.mark}</span>
-                <span className="hero-review__copy text-xs leading-tight text-white"><strong className="hero-review__rating block text-sm">{review.rating} ★★★★★</strong>{review.name} Reviews</span>
+                <span className="hero-review__copy text-xs leading-tight text-white"><strong className="hero-review__rating block text-sm">{review.rating} <span className="hero-review__stars">★★★★★</span></strong>{review.name} Reviews</span>
               </div>
             ))}
           </div>
