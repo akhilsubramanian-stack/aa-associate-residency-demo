@@ -107,20 +107,25 @@ body {
 
   .hero-cinema__stage {
     position: absolute;
-    inset: -4%;
+    inset: 0;
     overflow: hidden;
     transform-style: preserve-3d;
-    animation: hero-stage-float 13s ease-in-out infinite alternate;
   }
 
   .hero-cinema__video {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vh;
+    height: 100vw;
+    min-width: 100vh;
+    min-height: 100vw;
     object-fit: cover;
-    object-position: center 45%;
-    filter: saturate(1.08) contrast(1.05) brightness(.82);
-    transform: translateZ(-20px) scale(1.06);
-    animation: hero-video-breathe 16s ease-in-out infinite alternate;
+    object-position: center center;
+    filter: none;
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.01);
+    backface-visibility: hidden;
+    image-rendering: auto;
   }
 
   .hero-cinema__depth,
@@ -169,16 +174,6 @@ body {
     animation: hero-shine 8s ease-in-out infinite;
   }
 
-  @keyframes hero-stage-float {
-    from { transform: rotateX(.6deg) rotateY(-1.2deg) scale(1.015); }
-    to { transform: rotateX(-.6deg) rotateY(1.2deg) scale(1.03); }
-  }
-
-  @keyframes hero-video-breathe {
-    from { transform: translate3d(-.6%, -.3%, -20px) scale(1.06); }
-    to { transform: translate3d(.6%, .3%, -20px) scale(1.095); }
-  }
-
   @keyframes hero-depth-one {
     from { transform: translate3d(-.5%, -.4%, 42px) rotateX(1deg) rotateY(-1.5deg); }
     to { transform: translate3d(.5%, .4%, 54px) rotateX(-.5deg) rotateY(1deg); }
@@ -201,8 +196,7 @@ body {
   }
 
   @media (max-width: 640px) {
-    .hero-cinema__stage { inset: 0; }
-    .hero-cinema__video { object-position: 57% center; }
+    .hero-cinema__video { object-position: center center; }
     .hero-cinema__depth--one { inset: 5%; }
     .hero-cinema__depth--two { inset: 9%; }
   }
