@@ -1052,25 +1052,42 @@ body {
       font-size: .48rem;
     }
 
-    .hero-review__copy {
-      flex: 1 1 auto;
+    .hero-review__desktop-copy {
+      display: none;
+    }
+
+    .hero-review__mobile-copy {
+      display: grid;
       min-width: 0;
-      overflow: visible;
-      font-size: .42rem;
-      line-height: 1.12;
+      flex: 1 1 auto;
+      gap: .08rem;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .hero-review__mobile-copy strong {
+      display: flex;
+      align-items: center;
+      gap: .12rem;
       white-space: nowrap;
     }
 
-    .hero-review__rating {
-      overflow: visible;
-      font-size: .48rem;
-      text-overflow: clip;
-      white-space: nowrap;
+    .hero-review__mobile-copy strong span {
+      font-size: .5rem;
     }
 
-    .hero-review__stars {
-      font-size: .32rem;
+    .hero-review__mobile-copy strong i {
+      color: #e0c675;
+      font-size: .3rem;
+      font-style: normal;
       letter-spacing: -.08em;
+    }
+
+    .hero-review__mobile-copy small {
+      display: block;
+      overflow: visible;
+      font-size: .4rem;
+      white-space: nowrap;
     }
 
     .hero-cinema__depth--one { inset: 5%; }
