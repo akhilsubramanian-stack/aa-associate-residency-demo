@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, type CSSProperties, type PointerEvent } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
 import { StatCounter } from "./stat-counter";
@@ -55,13 +54,6 @@ export const Stats = ({ stats }: StatsProps) => {
         >
           <div className="authority-scene__shadow" aria-hidden="true" />
           <div className="authority-scene__frame">
-            <Image
-              src="/assets/sections/dubai-corporate-night-v1.png"
-              alt="Dubai skyline viewed from a premium executive lounge"
-              fill
-              sizes="(max-width: 640px) 100vw, 88rem"
-              className="authority-scene__image"
-            />
             <div className="authority-scene__veil" aria-hidden="true" />
             <div className="authority-scene__light" aria-hidden="true" />
             <div className="authority-scene__skyline" aria-hidden="true">
