@@ -1,5 +1,7 @@
 "use client";
 
+// Approved A&A residency campaign banner.
+
 import { useState } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
 import { useIntro, useRequestModal } from "@/hooks/ui-store";
