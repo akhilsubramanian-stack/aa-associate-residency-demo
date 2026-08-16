@@ -109,19 +109,14 @@ export const homeContent = {
     },
   },
   about: {
-    eyebrow: "The programme",
-    globeLabel: "A UAE company and investor residency, handled end to end.",
-    statement: {
-      lead: "Skip weeks of paperwork and secure ",
-      muted: "your free-zone company, two-year residency and Emirates ID in one coordinated five-day programme.",
-    },
-    socialLabel: "Talk to us",
-    socials: [
-      { label: "Call", href: "tel:+971564086728", icon: "x" },
-      { label: "WhatsApp", href: "#contact", icon: "behance" },
-      { label: "LinkedIn", href: "#contact", icon: "dribbble" },
-    ] as SocialLink[],
-    cta: { label: "Why A&A", href: "#about" },
+    eyebrow: "World's Fastest Residency Program",
+    title: "A&A Associate: The Fastest Route to UAE Residency",
+    paragraphs: [
+      "With A&A Associate, you can secure full UAE residency in just 5 working days. Your business licence, immigration card, e-channel registration and entry visa are all handled remotely in the first 3 days, so the groundwork is already done before you even land.",
+      "The remaining steps happen during a single 48-hour visit. That includes your status change, medical and biometrics—both fast-tracked through VIP services—residency approval and Emirates ID. No extended stays, repeat trips or weeks spent waiting on appointments.",
+    ],
+    videoId: "GjGP5boAsr4",
+    videoTitle: "A&A Associate — World's Fastest UAE Residency Program",
   },
   create: {
     words: [
