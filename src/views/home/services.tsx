@@ -62,7 +62,7 @@ export const Services = ({ services }: ServicesProps) => {
 
             <header className="included-scene__header">
               <p>{services.eyebrow}</p>
-              <h2 id="services-heading" className="mobile-section-heading">What&rsquo;s Included?</h2>
+              <h2 id="services-heading">{services.heading}</h2>
               <span>{services.intro}</span>
             </header>
 

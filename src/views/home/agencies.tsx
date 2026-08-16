@@ -19,7 +19,7 @@ export const Agencies = ({ agencies }: AgenciesProps) => {
           to={{ opacity: 1, transform: "translateY(0px)" }}
           className="agencies-header"
         >
-          <h2 id="agencies-heading" className="mobile-section-heading">We work closely with all <br className="mobile-heading-break" />Government Agencies</h2>
+          <h2 id="agencies-heading">{agencies.heading}</h2>
           <p>{agencies.intro}</p>
         </Inview>
 

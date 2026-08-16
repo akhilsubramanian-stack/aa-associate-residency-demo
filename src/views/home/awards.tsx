@@ -18,7 +18,7 @@ export const Awards = ({ awards }: AwardsProps) => {
           from={{ opacity: 0, transform: "translateY(24px)" }}
           to={{ opacity: 1, transform: "translateY(0px)" }}
         >
-          <h2 id="awards-heading" className="awards-slider__heading mobile-section-heading">
+          <h2 id="awards-heading" className="awards-slider__heading">
             Awards and Recognitions
           </h2>
 

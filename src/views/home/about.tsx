@@ -69,9 +69,7 @@ export const About = ({ about }: AboutProps) => {
                 <div className="residency-story__glow" aria-hidden="true" />
                 <div className="residency-story__copy">
                   <p className="residency-story__eyebrow">{about.eyebrow}</p>
-                  <h2 id="about-heading" className="mobile-section-heading">
-                    A&amp;A ASSOCIATE:<br className="mobile-heading-break" /> The Fastest Route to<br className="mobile-heading-break" /> UAE Residency
-                  </h2>
+                  <h2 id="about-heading">{about.title}</h2>
                   {about.paragraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}

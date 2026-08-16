@@ -28,7 +28,7 @@ export const Faq = ({ faq }: FaqProps) => {
           <div className="faq-panel">
             <header className="faq-header">
               <p>{faq.eyebrow}</p>
-              <h2 id="faq-heading" className="mobile-section-heading">UAE Residency FAQ&rsquo;s</h2>
+              <h2 id="faq-heading">{faq.heading}</h2>
               <span>{faq.intro}</span>
             </header>
             <div className="faq-list">
