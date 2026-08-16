@@ -1028,17 +1028,26 @@ body {
     }
 
     .hero-content {
+      width: 100%;
       gap: 2rem;
       padding-top: 7.75rem;
     }
 
+    .hero-copy {
+      width: 100%;
+      min-width: 0;
+    }
+
     .hero-title {
+      width: 100%;
       max-width: 100%;
-      font-size: clamp(2rem, 9.5vw, 2.4rem);
+      font-size: 7.6vw;
       line-height: .96;
     }
 
     .hero-title__first-line {
+      display: block;
+      max-width: 100%;
       white-space: nowrap;
     }
 
