@@ -99,7 +99,7 @@ body {
       font-size: clamp(1.95rem, 8.5vw, 2.35rem) !important;
       line-height: 1.03 !important;
       letter-spacing: -.04em !important;
-      text-align: left;
+      text-align: left !important;
       text-wrap: balance;
     }
 
