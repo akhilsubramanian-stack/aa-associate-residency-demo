@@ -225,6 +225,15 @@ export const homeContent = {
       { image: "/assets/awards/logo-2.webp", name: "CEO Insights Asia", detail: "Industry Recognition", year: "Featured" },
     ],
   },
+  testimonials: {
+    eyebrow: "Client Stories",
+    heading: "The Entrepreneur's First Choice for Business Setup",
+    intro: "See what our clients have to say. Every consultation starts with understanding your needs and business goals. Our team provides tailored advice to every client.",
+    items: [
+      { name: "Kristine", country: "Russian", flag: "🇷🇺", videoId: "ikIM_pcRMy8" },
+      { name: "Abdul", country: "French", flag: "🇫🇷", videoId: "6uJFwKl342c" },
+    ],
+  },
   footer: {
     brandWatermark: "A&A",
     cta: {
