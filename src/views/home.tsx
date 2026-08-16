@@ -2,7 +2,6 @@ import { homeContent } from "@/data/mocks/home";
 import { Header } from "@/views/home/header";
 import { Hero } from "@/views/home/hero";
 import { About } from "@/views/home/about";
-import { CreateBand } from "@/views/home/create-band";
 import { Portfolio } from "@/views/home/portfolio";
 import { Services } from "@/views/home/services";
 import { Stats } from "@/views/home/stats";
@@ -37,7 +36,6 @@ export const HomeView = () => {
       <main id="main">
         <Hero hero={homeContent.hero} />
         <About about={homeContent.about} />
-        <CreateBand words={homeContent.create.words} />
         <Portfolio portfolio={homeContent.portfolio} />
         <Services services={homeContent.services} />
         <Stats stats={homeContent.stats} />
