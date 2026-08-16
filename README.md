@@ -41,6 +41,10 @@ git remote add origin <your-repository-url>
 git push -u origin main
 ```
 
+## Deployment workflow
+
+The existing Vercel project `aa-associate-residency-form-v4` is connected to the `main` branch of this repository. Approved updates committed to `main` deploy to the same project and stable URL; do not create a separate Vercel project for each revision.
+
 ## Deployment note
 
 The consultation form is a demo interaction. Connect the existing contact API route to the final CRM or email destination before production launch. Set `NEXT_PUBLIC_SITE_URL` to the final domain for canonical URLs and social metadata.
