@@ -1,9 +1,8 @@
 "use client";
 
-import TextEngine from "spring-text-engine";
-import { easings } from "@react-spring/web";
+import Image from "next/image";
+import { useState, type CSSProperties, type PointerEvent } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
-import { Eyebrow } from "@/components/ui/eyebrow";
 import { StatCounter } from "./stat-counter";
 import type { homeContent } from "@/data/mocks/home";
 
@@ -11,42 +10,86 @@ export interface StatsProps {
   stats: (typeof homeContent)["stats"];
 }
 
+type StatsStyle = CSSProperties & {
+  "--stats-rx": string;
+  "--stats-ry": string;
+  "--stats-x": string;
+  "--stats-y": string;
+};
+
+const baseStatsStyle: StatsStyle = {
+  "--stats-rx": "0deg",
+  "--stats-ry": "0deg",
+  "--stats-x": "50%",
+  "--stats-y": "50%",
+};
+
 export const Stats = ({ stats }: StatsProps) => {
+  const [style, setStyle] = useState<StatsStyle>(baseStatsStyle);
+
+  const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    setStyle({
+      "--stats-rx": `${(0.5 - y) * 3.5}deg`,
+      "--stats-ry": `${(x - 0.5) * 5}deg`,
+      "--stats-x": `${x * 100}%`,
+      "--stats-y": `${y * 100}%`,
+    });
+  };
+
   return (
-    <section
-      aria-labelledby="stats-heading"
-      className="bg-background"
-    >
-      <div className="mx-auto max-w-shell px-5 pb-20 sm:px-8 lg:pb-28">
+    <section aria-labelledby="stats-heading" className="authority-section">
+      <div className="mx-auto max-w-shell px-5 py-20 sm:px-8 lg:py-28">
         <Inview
-          tag="div"
+          tag="article"
           mode="once"
-          from={{ opacity: 0, transform: "translateY(40px) scale(0.99)" }}
+          from={{ opacity: 0, transform: "translateY(45px) scale(.985)" }}
           to={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
           config={{ tension: 180, friction: 26 }}
-          className="rounded-card bg-ink px-6 py-12 text-white sm:px-8 sm:py-16 md:px-16"
+          className="authority-scene"
+          style={style}
+          onPointerMove={handlePointerMove}
+          onPointerLeave={() => setStyle(baseStatsStyle)}
         >
-          <Eyebrow tone="light">{stats.eyebrow}</Eyebrow>
+          <div className="authority-scene__shadow" aria-hidden="true" />
+          <div className="authority-scene__frame">
+            <Image
+              src="/assets/sections/dubai-corporate-night-v1.png"
+              alt="Dubai skyline viewed from a premium executive lounge"
+              fill
+              sizes="(max-width: 640px) 100vw, 88rem"
+              className="authority-scene__image"
+            />
+            <div className="authority-scene__veil" aria-hidden="true" />
+            <div className="authority-scene__light" aria-hidden="true" />
+            <div className="authority-scene__skyline" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
 
-          <TextEngine
-            tag="h2"
-            id="stats-heading"
-            mode="once"
-            overflow
-            lineIn={{ y: "0%", opacity: 1 }}
-            lineOut={{ y: "100%", opacity: 0 }}
-            lineConfig={{ duration: 900, easing: easings.easeOutCubic }}
-            delayIn={120}
-            className="mt-4 max-w-[20ch] text-3xl font-medium tracking-tight md:text-4xl"
-          >
-            {stats.heading}
-          </TextEngine>
+            <div className="authority-scene__content">
+              <header>
+                <p>{stats.eyebrow}</p>
+                <h2 id="stats-heading">{stats.heading}</h2>
+                <span>{stats.intro}</span>
+              </header>
 
-          <ul className="mt-14 grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
-            {stats.items.map((stat, index) => (
-              <StatCounter key={stat.label} stat={stat} index={index} />
-            ))}
-          </ul>
+              <ul>
+                {stats.items.map((stat, index) => (
+                  <StatCounter key={stat.label} stat={stat} index={index} />
+                ))}
+              </ul>
+            </div>
+
+            <div className="authority-scene__seal" aria-hidden="true">
+              <span>A&amp;A</span>
+              <small>UAE · 10 YEARS</small>
+            </div>
+            <div className="authority-scene__edge" aria-hidden="true" />
+          </div>
         </Inview>
       </div>
     </section>
