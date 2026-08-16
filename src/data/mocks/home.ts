@@ -217,12 +217,12 @@ export const homeContent = {
     heading: "Recognised for excellence across the UAE",
     intro: "Independent recognition for trusted advisory, exceptional workplace culture and consistent service to entrepreneurs.",
     items: [
-      { mark: "S", name: "Superbrands", detail: "UAE's Choice", year: "Awarded" },
-      { mark: "G", name: "Global Business Outlook", detail: "Business Setup Consultancy", year: "Winner" },
-      { mark: "C", name: "Centuro Global", detail: "Registered Global Member", year: "Member" },
-      { mark: "10", name: "Top 10 Consultants", detail: "Business Consultants from Asia", year: "2023" },
-      { mark: "GPTW", name: "Great Place To Work", detail: "Certified UAE", year: "2025–26" },
-      { mark: "CEO", name: "CEO Insights Asia", detail: "Industry Recognition", year: "Featured" },
+      { image: "/assets/awards/logo-1.webp", name: "Superbrands", detail: "UAE's Choice", year: "Awarded" },
+      { image: "/assets/awards/logo-6.webp", name: "Global Business Outlook", detail: "Business Setup Consultancy", year: "Winner" },
+      { image: "/assets/awards/logo-5.webp", name: "Centuro Global", detail: "Registered Global Member", year: "Member" },
+      { image: "/assets/awards/logo-4.webp", name: "Top 10 Consultants", detail: "Business Consultants from Asia", year: "2023" },
+      { image: "/assets/awards/logo-3.webp", name: "Great Place To Work", detail: "Certified UAE", year: "2025–26" },
+      { image: "/assets/awards/logo-2.webp", name: "CEO Insights Asia", detail: "Industry Recognition", year: "Featured" },
     ],
   },
   footer: {
