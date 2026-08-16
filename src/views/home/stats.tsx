@@ -85,10 +85,6 @@ export const Stats = ({ stats }: StatsProps) => {
               </ul>
             </div>
 
-            <div className="authority-scene__seal" aria-hidden="true">
-              <span>A&amp;A</span>
-              <small>UAE · 10 YEARS</small>
-            </div>
             <div className="authority-scene__edge" aria-hidden="true" />
           </div>
         </Inview>
