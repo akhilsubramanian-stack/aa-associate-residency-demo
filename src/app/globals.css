@@ -1031,7 +1031,7 @@ body {
     }
 
     .hero-reviews {
-      display: grid;
+      display: grid !important;
       width: 100%;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: .25rem;
