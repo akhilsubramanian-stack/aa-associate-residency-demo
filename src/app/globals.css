@@ -177,6 +177,28 @@ body {
 
   @media (prefers-reduced-motion:reduce){.authority-scene__frame,.authority-stat{transform:none;transition:none}.authority-scene__seal{animation:none;transform:none}}
 
+  .awards-section { overflow:hidden; background:linear-gradient(180deg,#fff 0%,#f5f1e8 100%); }
+  .awards-stage { --award-rx:0deg;--award-ry:0deg;--award-x:50%;--award-y:50%; position:relative; min-height:46rem; perspective:1600px; transform-style:preserve-3d; }
+  .awards-stage__back { position:absolute; inset:2.2rem 3rem -1rem; border-radius:2.3rem; background:linear-gradient(120deg,#d4aa4c,#0b5c91); opacity:.25; filter:blur(.3rem); transform:translateZ(-60px) rotateX(calc(var(--award-rx)*.4)) rotateY(calc(var(--award-ry)*.4)); }
+  .awards-stage__panel { position:absolute; inset:0; overflow:hidden; border:1px solid rgba(204,159,57,.52); border-radius:2rem; background:radial-gradient(circle at 85% 15%,#174f75 0%,#082f4d 28%,#031d33 72%); box-shadow:0 3rem 7rem rgba(2,30,51,.22),inset 0 1px rgba(255,255,255,.16); color:#fff; transform:rotateX(var(--award-rx)) rotateY(var(--award-ry)); transform-style:preserve-3d; transition:transform .2s ease-out; }
+  .awards-stage__glow { position:absolute; inset:0; background:radial-gradient(circle at var(--award-x) var(--award-y),rgba(231,190,91,.2),transparent 28%); mix-blend-mode:screen; }
+  .awards-stage__header { position:relative; z-index:2; max-width:53rem; padding:4rem 4rem 2.4rem; transform:translateZ(55px); }
+  .awards-stage__header>p { color:#e0b85a; font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+  .awards-stage__header h2 { margin-top:.8rem; font-size:clamp(2.6rem,4.5vw,4.8rem); font-weight:650; line-height:1; letter-spacing:-.05em; }
+  .awards-stage__header span { display:block; max-width:42rem; margin-top:1.2rem; color:rgba(255,255,255,.68); font-size:1rem; line-height:1.65; }
+  .awards-grid { position:relative; z-index:3; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; padding:0 4rem 4rem; transform:translateZ(38px); }
+  .award-plaque { position:relative; display:grid; min-height:12.5rem; grid-template-columns:auto 1fr; align-items:center; gap:1rem; overflow:hidden; border:1px solid rgba(225,184,88,.42); border-radius:1.35rem; background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(4,36,59,.55)); padding:1.3rem; box-shadow:0 1.5rem 3rem rgba(0,12,22,.24),inset 0 1px rgba(255,255,255,.13); backdrop-filter:blur(14px); transition:transform .35s ease,border-color .35s ease,background .35s ease; }
+  .award-plaque:hover { border-color:rgba(242,205,116,.85); background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(9,58,91,.7)); transform:translate3d(0,-.5rem,45px) rotateX(2deg); }
+  .award-plaque__medallion { display:grid; width:4.6rem; height:4.6rem; place-items:center; border:1px solid rgba(244,207,119,.7); border-radius:1.1rem; background:linear-gradient(145deg,#f2cf78,#9b6c19); box-shadow:inset 0 1px rgba(255,255,255,.65),0 .8rem 1.8rem rgba(0,13,24,.3); color:#082b47; transform:rotate(-4deg); }
+  .award-plaque__medallion span { max-width:4rem; font-size:clamp(.72rem,1.5vw,1.4rem); font-weight:900; letter-spacing:-.04em; text-align:center; }
+  .award-plaque strong { display:block; color:#fff; font-size:1rem; line-height:1.2; }
+  .award-plaque p { margin-top:.45rem; color:rgba(255,255,255,.58); font-size:.72rem; line-height:1.35; }
+  .award-plaque small { position:absolute; right:1rem; bottom:.8rem; color:#dfb75a; font-size:.56rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+  .awards-stage__edge { position:absolute; z-index:5; inset:1rem; border:1px solid rgba(255,255,255,.14); border-radius:1.25rem; pointer-events:none; transform:translateZ(72px); }
+  @media (max-width:900px){.awards-stage{min-height:62rem}.awards-stage__header{padding:3rem 3rem 2rem}.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 3rem 3rem}}
+  @media (max-width:640px){.awards-stage{min-height:79rem;perspective:none}.awards-stage__panel{border-radius:1.4rem;transform:none}.awards-stage__header{padding:3rem 1.4rem 2rem;transform:none}.awards-stage__header h2{font-size:2.65rem}.awards-grid{grid-template-columns:1fr;gap:.7rem;padding:0 1.4rem 2rem;transform:none}.award-plaque{min-height:8.5rem}.award-plaque__medallion{width:4rem;height:4rem}.awards-stage__edge{inset:.65rem;border-radius:.95rem;transform:none}}
+  @media (prefers-reduced-motion:reduce){.awards-stage__panel,.award-plaque{transform:none;transition:none}}
+
   .included-section {
     overflow: hidden;
     background: #fff;
