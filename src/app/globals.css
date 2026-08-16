@@ -1041,35 +1041,36 @@ body {
       width: 100%;
       min-width: 0;
       overflow: hidden;
-      gap: .22rem;
-      padding: .28rem .25rem;
+      gap: .15rem;
+      padding: .22rem .15rem;
     }
 
     .hero-review__mark {
-      width: 1.1rem;
-      height: 1.1rem;
-      flex: 0 0 1.1rem;
-      font-size: .6rem;
+      width: .85rem;
+      height: .85rem;
+      flex: 0 0 .85rem;
+      font-size: .48rem;
     }
 
     .hero-review__copy {
+      flex: 1 1 auto;
       min-width: 0;
-      overflow: hidden;
-      font-size: .36rem;
-      line-height: 1.08;
+      overflow: visible;
+      font-size: .42rem;
+      line-height: 1.12;
       white-space: nowrap;
     }
 
     .hero-review__rating {
-      overflow: hidden;
+      overflow: visible;
       font-size: .48rem;
       text-overflow: clip;
       white-space: nowrap;
     }
 
     .hero-review__stars {
-      font-size: .39rem;
-      letter-spacing: -.1em;
+      font-size: .32rem;
+      letter-spacing: -.08em;
     }
 
     .hero-cinema__depth--one { inset: 5%; }
