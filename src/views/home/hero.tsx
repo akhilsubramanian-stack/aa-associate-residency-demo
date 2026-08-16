@@ -3,7 +3,6 @@
 import TextEngine from "spring-text-engine";
 import { easings } from "@react-spring/web";
 import { Inview } from "@/components/animation/springs/in-view";
-import { LiquidReveal } from "@/components/common/liquid-reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PillButton } from "@/components/ui/pill-button";
 import { StarIcon } from "@/components/ui/icons";
@@ -27,19 +26,31 @@ export const Hero = ({ hero }: HeroProps) => {
       aria-labelledby="hero-heading"
       className="relative isolate overflow-hidden rounded-b-card bg-hero-to"
     >
-      {/* Full-bleed background — `before` shown, `after` revealed on a cursor trail */}
-      <LiquidReveal
-        beforeSrc="/assets/hero/after.jpg"
-        afterSrc="/assets/hero/before.jpg"
-        alt="A&A Associate team collaborating in a luxury UAE office"
-        className="absolute inset-0 z-0"
-        brushRadius={143}
-      />
+      {/* Cinematic Ain Dubai footage presented as a dimensional glass stage. */}
+      <div className="hero-cinema absolute inset-0 z-0" aria-hidden>
+        <div className="hero-cinema__stage">
+          <video
+            className="hero-cinema__video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/assets/hero/after.jpg"
+          >
+            <source src="/assets/hero/ain-dubai.mp4" type="video/mp4" />
+          </video>
+          <span className="hero-cinema__depth hero-cinema__depth--one" />
+          <span className="hero-cinema__depth hero-cinema__depth--two" />
+          <span className="hero-cinema__glow" />
+          <span className="hero-cinema__shine" />
+        </div>
+      </div>
 
       {/* Legibility vignette — keeps the header / status bar readable over the photo */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-background/35 via-transparent to-background/35"
+        className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(4,8,14,.78)_0%,rgba(4,8,14,.54)_42%,rgba(4,8,14,.18)_72%,rgba(4,8,14,.48)_100%)]"
       />
 
       {/* Giant brand watermark over the photo */}
@@ -52,14 +63,14 @@ export const Hero = ({ hero }: HeroProps) => {
         config={{ tension: 120, friction: 30 }}
         delayIn={300}
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-[7rem] z-[1] select-none text-center font-bold leading-none text-watermark text-white/40"
+        className="pointer-events-none absolute inset-x-0 bottom-[7rem] z-[1] select-none text-center font-bold leading-none text-watermark text-white/20"
       >
         {hero.brandWatermark}
       </Inview>
 
       <div className="relative z-20 mx-auto flex max-w-shell flex-col gap-8 px-5 pb-20 pt-28 sm:px-8 lg:grid lg:min-h-lvh lg:grid-cols-12 lg:gap-10 lg:pb-28 lg:pt-36">
         {/* Left — headline & CTAs */}
-        <div className="relative z-10 order-1 flex flex-col gap-7 lg:order-none lg:col-span-7">
+        <div className="relative z-10 order-1 flex flex-col gap-7 text-white lg:order-none lg:col-span-7">
           <Inview
             tag="div"
             mode="once"
@@ -109,7 +120,7 @@ export const Hero = ({ hero }: HeroProps) => {
                 <StarIcon key={index} className="text-base" />
               ))}
             </span>
-            <span className="text-sm font-medium text-foreground/70">
+            <span className="text-sm font-medium text-white/75">
               {hero.customers}
             </span>
           </Inview>
@@ -156,7 +167,7 @@ export const Hero = ({ hero }: HeroProps) => {
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
         delayIn={900}
-        className="relative z-20 mx-auto flex max-w-shell items-center justify-between gap-3 border-t border-foreground/10 px-5 py-5 text-xs font-medium uppercase tracking-wide text-foreground/60 sm:px-8"
+        className="relative z-20 mx-auto flex max-w-shell items-center justify-between gap-3 border-t border-white/15 px-5 py-5 text-xs font-medium uppercase tracking-wide text-white/70 sm:px-8"
       >
         <span>{hero.footer.left}</span>
         <span className="hidden sm:inline">{hero.footer.center}</span>
