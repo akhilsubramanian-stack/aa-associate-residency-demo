@@ -1112,3 +1112,11 @@ body {
     min-height: 46rem;
   }
 }
+
+/* Keep the complete-package title clear of its 3D animation on desktop. */
+@media (min-width: 1051px) {
+  .included-scene__header > p,
+  .included-scene__header > h2 {
+    transform: translateY(-8rem);
+  }
+}
