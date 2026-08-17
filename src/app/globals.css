@@ -1120,3 +1120,17 @@ body {
     transform: translateY(-8rem);
   }
 }
+
+/* Make the residency enquiry form easy to read at a glance. */
+form label {
+  font-weight: 700 !important;
+}
+
+form select,
+form option {
+  font-weight: 700;
+}
+
+form button {
+  font-weight: 800 !important;
+}
