@@ -204,9 +204,9 @@ export const homeContent = {
   stats: {
     eyebrow: "Why A&A Associate",
     heading: "UAE's Largest Corporate Service Provider",
-    intro: "A&A Associate guides more than 1,200 company formations each year across mainland, free-zone and offshore jurisdictions. With an international team, 12 offices and direct partnerships with over 30 authorities, we handle the regulatory relationships so you can move with confidence.",
+    intro: "A&A Associate guides more than 12,000 company formations each year across mainland, free-zone and offshore jurisdictions. With an international team, 12 offices and direct partnerships with over 30 authorities, we handle the regulatory relationships so you can move with confidence.",
     items: [
-      { value: 1200, suffix: "+", label: "Company formations per year" },
+      { value: 12000, suffix: "+", label: "Company formations per year" },
       { value: 450, suffix: "+", label: "Team members" },
       { value: 12, suffix: "+", label: "Offices across the globe" },
       { value: 30, suffix: "+", label: "Authority partnerships" },
