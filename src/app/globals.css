@@ -1134,3 +1134,15 @@ form option {
 form button {
   font-weight: 800 !important;
 }
+
+/* Keep every authority statistic fully visible, including 12,000+. */
+.authority-stat__value {
+  font-size: clamp(2.2rem, 3.2vw, 3.8rem);
+  letter-spacing: -.05em;
+}
+
+@media (max-width: 640px) {
+  .authority-stat__value {
+    font-size: 2rem;
+  }
+}
