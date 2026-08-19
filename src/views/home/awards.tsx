@@ -10,18 +10,14 @@ export const Awards = ({ awards }: AwardsProps) => {
   const sliderItems = [...awards.items, ...awards.items];
 
   return (
-    <section className="awards-slider-section" aria-labelledby="awards-heading">
-      <div className="mx-auto max-w-shell px-5 py-20 sm:px-8 lg:py-24">
+    <section className="awards-slider-section" aria-label="A&A Associate awards">
+      <div className="mx-auto max-w-shell px-5 py-7 sm:px-8 lg:py-10">
         <Inview
           tag="div"
           mode="once"
-          from={{ opacity: 0, transform: "translateY(24px)" }}
+          from={{ opacity: 0, transform: "translateY(16px)" }}
           to={{ opacity: 1, transform: "translateY(0px)" }}
         >
-          <h2 id="awards-heading" className="awards-slider__heading">
-            Awards and Recognitions
-          </h2>
-
           <div className="awards-slider" aria-label="A&A Associate awards">
             <ul className="awards-slider__track">
               {sliderItems.map((award, index) => (
@@ -36,6 +32,7 @@ export const Awards = ({ awards }: AwardsProps) => {
                     width={285}
                     height={110}
                     sizes="(max-width: 640px) 180px, 230px"
+                    quality={100}
                   />
                 </li>
               ))}
