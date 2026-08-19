@@ -1199,3 +1199,41 @@ form button {
   filter: none;
   transform: none;
 }
+
+
+/* Static, full-resolution awards row matching the supplied Figma design. */
+.awards-slider-section .awards-slider {
+  overflow: visible;
+  mask-image: none;
+}
+
+.awards-slider-section .awards-slider__track {
+  width: 100%;
+  justify-content: space-between;
+  animation: none;
+}
+
+.awards-slider-section .awards-slider__item {
+  width: clamp(7.25rem, 13vw, 12rem);
+  height: 6.4rem;
+  flex-basis: clamp(7.25rem, 13vw, 12rem);
+  padding: .65rem .9rem;
+}
+
+@media (max-width: 640px) {
+  .awards-slider-section .awards-slider {
+    overflow-x: auto;
+  }
+
+  .awards-slider-section .awards-slider__track {
+    width: max-content;
+    gap: .45rem;
+    justify-content: flex-start;
+  }
+
+  .awards-slider-section .awards-slider__item {
+    width: 8.25rem;
+    height: 5.8rem;
+    flex-basis: 8.25rem;
+  }
+}
