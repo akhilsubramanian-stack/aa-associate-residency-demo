@@ -7,7 +7,7 @@ export interface AwardsProps {
 }
 
 export const Awards = ({ awards }: AwardsProps) => {
-  const sliderItems = [...awards.items, ...awards.items];
+  const sliderItems = awards.items;
 
   return (
     <section className="awards-slider-section" aria-label="A&A Associate awards">
@@ -24,7 +24,6 @@ export const Awards = ({ awards }: AwardsProps) => {
                 <li
                   className="awards-slider__item"
                   key={`${award.name}-${index}`}
-                  aria-hidden={index >= awards.items.length}
                 >
                   <Image
                     src={award.image}
