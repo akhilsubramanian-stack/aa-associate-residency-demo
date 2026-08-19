@@ -93,31 +93,15 @@ export const Hero = ({ hero }: HeroProps) => {
 
       <div className="hero-content relative z-20 mx-auto grid max-w-shell gap-10 px-5 pb-16 pt-32 sm:px-8 lg:min-h-lvh lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-14 lg:pb-20 lg:pt-36">
         <div className="hero-copy flex flex-col items-start text-white">
-          <Inview tag="p" mode="once" enabled={ready} from={{ opacity: 0, transform: "translateY(10px)" }} to={{ opacity: 1, transform: "translateY(0px)" }} className="mb-4 text-sm font-semibold uppercase tracking-[.18em] text-[#e0c675]">
-            UAE Investor Residency
-          </Inview>
-
           <h1 id="hero-heading" className="hero-title max-w-[13ch] text-5xl font-semibold leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">
-            World&apos;s Fastest UAE <span className="text-[#e0c675]">Residency Program</span>
+            Start a Business in the UAE <span className="text-[#e0c675]">From Anywhere in the World</span>
           </h1>
 
           <p className="hero-description mt-5 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
-            Secure full UAE residency in just 5 working days, with most of the process completed remotely before you arrive.
+            A&amp;A Associate provides complete support for launching a business in the UAE. Get expert help on licensing, visa, banking, and related support services. We are the UAE&apos;s largest corporate service provider with over a decade of experience in the industry.
           </p>
 
-          <div className="hero-inclusions mt-7 w-full max-w-2xl rounded-3xl border border-[#e0c675]/35 bg-transparent p-5 sm:p-6">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[.18em] text-[#e0c675]">Your company includes</p>
-            <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
-              {inclusions.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-white/92">
-                  <span aria-hidden className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-[#e0c675] text-[.7rem] font-bold text-[#17131b]">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <button type="button" onClick={openModal} className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#e0c675] px-7 py-4 text-sm font-bold text-[#17131b] shadow-[0_16px_44px_rgba(224,198,117,.24)] transition hover:-translate-y-0.5 hover:bg-[#f0d986] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+          <button type="button" onClick={openModal className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#e0c675] px-7 py-4 text-sm font-bold text-[#17131b] shadow-[0_16px_44px_rgba(224,198,117,.24)] transition hover:-translate-y-0.5 hover:bg-[#f0d986] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
             Start Your Residency <span aria-hidden>→</span>
           </button>
 
