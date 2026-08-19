@@ -101,7 +101,7 @@ export const Hero = ({ hero }: HeroProps) => {
             A&amp;A Associate provides complete support for launching a business in the UAE. Get expert help on licensing, visa, banking, and related support services. We are the UAE&apos;s largest corporate service provider with over a decade of experience in the industry.
           </p>
 
-          <button type="button" onClick={openModal className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#e0c675] px-7 py-4 text-sm font-bold text-[#17131b] shadow-[0_16px_44px_rgba(224,198,117,.24)] transition hover:-translate-y-0.5 hover:bg-[#f0d986] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+          <button type="button" onClick={openModal} className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#e0c675] px-7 py-4 text-sm font-bold text-[#17131b] shadow-[0_16px_44px_rgba(224,198,117,.24)] transition hover:-translate-y-0.5 hover:bg-[#f0d986] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
             Start Your Residency <span aria-hidden>→</span>
           </button>
 
