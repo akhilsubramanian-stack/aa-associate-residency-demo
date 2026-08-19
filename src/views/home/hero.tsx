@@ -2,7 +2,7 @@
 
 // Approved A&A residency campaign banner.
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Inview } from "@/components/animation/springs/in-view";
 import { useIntro, useRequestModal } from "@/hooks/ui-store";
 import type { homeContent } from "@/data/mocks/home";
@@ -21,6 +21,11 @@ const inclusions = [
   "Free Visa Renewal Every 2 Years",
 ];
 
+const bannerVideoParts = Array.from(
+  { length: 17 },
+  (_, index) => `/assets/hero/ain-dubai-banner.part-${String(index + 1).padStart(2, "0")}.b64`,
+);
+
 const reviews = [
   { mark: "G", name: "Google", rating: "4.6", color: "text-[#4285f4]" },
   { mark: "★", name: "Trustpilot", rating: "4.7", color: "text-[#00b67a]" },
@@ -31,6 +36,40 @@ export const Hero = ({ hero }: HeroProps) => {
   const ready = useIntro((state) => state.ready);
   const openModal = useRequestModal((state) => state.openModal);
   const [step, setStep] = useState(1);
+  const [bannerVideoSrc, setBannerVideoSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    let objectUrl: string | null = null;
+
+    const loadBannerVideo = async () => {
+      try {
+        const parts = await Promise.all(
+          bannerVideoParts.map(async (part) => {
+            const response = await fetch(part);
+            if (!response.ok) throw new Error("Banner video segment could not load");
+
+            const binary = atob((await response.text()).trim());
+            const bytes = new Uint8Array(binary.length);
+            for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+            return bytes;
+          }),
+        );
+
+        objectUrl = URL.createObjectURL(new Blob(parts, { type: "video/mp4" }));
+        if (active) setBannerVideoSrc(objectUrl);
+      } catch {
+        // Keep the hero background graceful if a visitor is offline.
+      }
+    };
+
+    void loadBannerVideo();
+
+    return () => {
+      active = false;
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, []);
 
   const next = () => setStep((current) => Math.min(3, current + 1));
   const back = () => setStep((current) => Math.max(1, current - 1));
@@ -39,9 +78,11 @@ export const Hero = ({ hero }: HeroProps) => {
     <section id="home" aria-labelledby="hero-heading" className="relative isolate overflow-hidden rounded-b-card bg-[#070b16]">
       <div className="hero-cinema absolute inset-0 z-0" aria-hidden>
         <div className="hero-cinema__stage">
-          <video className="hero-cinema__video" autoPlay muted loop playsInline preload="auto">
-            <source src="https://aa-associate-residency-3d.vercel.app/assets/hero/ain-dubai.mp4" type="video/mp4" />
-          </video>
+          {bannerVideoSrc ? (
+            <video className="hero-cinema__video" autoPlay muted loop playsInline preload="auto">
+              <source src={bannerVideoSrc} type="video/mp4" />
+            </video>
+          ) : null}
           <span className="hero-cinema__depth hero-cinema__depth--one" />
           <span className="hero-cinema__depth hero-cinema__depth--two" />
           <span className="hero-cinema__glow" />
