@@ -1181,3 +1181,21 @@ form button {
 @media (prefers-reduced-motion: reduce) {
   .awards-slider__item { animation: none; }
 }
+
+
+/* Keep the reference awards logos sharp and readable. */
+.awards-slider-section .awards-slider {
+  margin-top: 0;
+  perspective: none;
+}
+
+.awards-slider-section .awards-slider__item {
+  animation: none;
+  transform: none;
+}
+
+.awards-slider-section .awards-slider__item img,
+.awards-slider-section .awards-slider__item:hover img {
+  filter: none;
+  transform: none;
+}
