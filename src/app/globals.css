@@ -1146,3 +1146,38 @@ form button {
     font-size: 2rem;
   }
 }
+
+
+/* Premium 3D motion for the awards row directly beneath the hero banner. */
+.awards-slider {
+  perspective: 1200px;
+}
+
+.awards-slider__item {
+  transform-style: preserve-3d;
+  animation: awards-item-float 5.5s ease-in-out infinite alternate;
+}
+
+.awards-slider__item:nth-child(2n) {
+  animation-delay: -2.4s;
+}
+
+.awards-slider__item img {
+  filter: drop-shadow(0 1rem 1rem rgba(3, 36, 60, .14));
+  transform: translateZ(26px) rotateY(-5deg) rotateX(2deg);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.awards-slider__item:hover img {
+  filter: drop-shadow(0 1.35rem 1.3rem rgba(3, 36, 60, .22));
+  transform: translateZ(46px) rotateY(0) rotateX(0) scale(1.04);
+}
+
+@keyframes awards-item-float {
+  from { transform: translateY(-4px) rotateX(1.2deg); }
+  to { transform: translateY(5px) rotateX(-1.2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .awards-slider__item { animation: none; }
+}
