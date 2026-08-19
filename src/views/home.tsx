@@ -40,11 +40,11 @@ export const HomeView = () => {
 
       <main id="main">
         <Hero hero={homeContent.hero} />
+        <Awards awards={homeContent.awards} />
         <About about={homeContent.about} />
         <Portfolio portfolio={homeContent.portfolio} />
         <Services services={homeContent.services} />
         <Stats stats={homeContent.stats} />
-        <Awards awards={homeContent.awards} />
         <Testimonials testimonials={homeContent.testimonials} />
         <Agencies agencies={homeContent.agencies} />
         <Faq faq={homeContent.faq} />
